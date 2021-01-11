@@ -8,4 +8,5 @@ Program is going to offer tools for analysing data and creating questionnaires f
 
 Program consists of frontend and backend. 
 
-You can run frontend and backend from their folders with command "npm start". 
+You can run frontend and backend from their folders with command "npm start". When running frontend or backend for the first time you need to 
+run command "npm install" to install dependencies. 
