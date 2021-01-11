@@ -1,0 +1,32 @@
+.aware-header {
+    height: 10vh;
+    width: 100vw;
+    transition: height 700ms;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--header-bg); 
+    border-style: none none groove none;
+}
+
+/* For dynamic header. 
+.aware-header:hover {
+    height: 10vh; 
+    opacity: 100; 
+}*/
+
+.header-nav {
+    margin: 0 !important;
+    border-radius: 0px !important;  
+}
+
+.nav-item {
+    border-radius: 20vh !important; 
+}
+
+.aware_vec {
+    display: inline;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 6%;
+}

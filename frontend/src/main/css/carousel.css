@@ -1,0 +1,26 @@
+.slick-center {
+    transform: scale(1.0) !important; 
+    transition: transform 5s;
+    width: 60vw !important;
+    min-width: 600px;  
+    z-index: 1;
+    padding: 3px;   
+}
+
+.slick-track {
+    display: flex; 
+    justify-content: center;
+}
+
+.slick-slide { 
+    transform: scale(0.85); 
+    transition: transform 0.7s;     
+}
+
+.carousel-addSlide {
+    min-height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
