@@ -1,7 +1,7 @@
 # Data analysis program
 
 Note: This program is being developed in a private repository and is here for a reference.
-Server doesnt start because there are no enviroment variables, for security reasons, and
+Server doesn't start because there are no enviroment variables, for security reasons, and
 therefore it cannot connect to database. 
 
 Program is going to offer tools for analysing data and creating questionnaires for a physical device which can then collect data from clients. 
