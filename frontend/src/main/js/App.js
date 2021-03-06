@@ -1,44 +1,49 @@
 import React, {useState} from 'react'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-import Landing from './landing'
+import Manager from './QuestionTemplate/manager' 
+import Hub from './dataCenter/hub'
 import Header from './header'
+import Creator from './QuestionTemplate/creator'
 
 import '../css/App.css'
 
 const App = () => {
 
-    // TODO: Store list of pages in JSON
     const pages = [
         {
-            id: 0,
-            name: 'Data Center'
+            name: 'Data center',
+            path: '/'
         },
         {
-            id: 1,
-            name: 'Question Manager'
+            name: 'Question manager',
+            path: '/manager'
         }
     ]
+
     // State variable for storing the identifier for the current active page
     const [activePage, setActive] = useState(pages[0].name)
 
-    // Event handler for clicking menu buttons
-    const handleMenuClick = (event, {name}) => {
-        event.preventDefault()
-        console.log(`Changing activePage to ${name}`)
-        setActive(name)
-    }
-
     return (
         <div className="App">
-            <Header
-                pages={pages}
-                activePage={activePage}
-                handleMenuClick={handleMenuClick}
-            />
-            <Landing
-                pages={pages}
-                activePage={activePage} 
-            />
+            <Router>
+                <Header
+                    pages={pages}
+                    activePage={activePage}
+                    setActive={setActive}
+                />
+                <Switch>
+                    <Route path='/manager/creator'>
+                        <Creator/>
+                    </Route>
+                    <Route path='/manager'>
+                        <Manager/>
+                    </Route>
+                    <Route path='/'>
+                        <Hub/>
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     )
 }

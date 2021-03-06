@@ -1,5 +1,7 @@
-import React from 'react'; 
-import {Icon} from 'semantic-ui-react';
+import React from 'react'
+import {Icon} from 'semantic-ui-react'
+
+//Icons from semantic-ui-react. 
 
 export const Desktop = () => {
     return(
@@ -12,6 +14,21 @@ export const Desktop = () => {
     )
 }
 
+//Error icon can have message attached to it. 
+export const Error = ({msg}) => {
+    return(
+        <div className='error'>
+            <Icon
+                className='icon-error'
+                name='exclamation'
+                size='big'
+                color='red'
+            />
+            {msg}
+        </div>
+    )
+}
+
 export const Trash = ({onClick}) => {
     return(
         <Icon
@@ -21,5 +38,17 @@ export const Trash = ({onClick}) => {
             color='red'
             onClick={onClick}
         />
+    )
+}
+
+export const Back = ({onClick}) => {
+    return(
+        <Icon
+            className='angle-left'
+            name='angle left'
+            size='huge'
+            color='red'
+            onClick={onClick}
+        />        
     )
 }

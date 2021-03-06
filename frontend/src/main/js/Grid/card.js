@@ -1,16 +1,17 @@
 import React from 'react' 
 
-//Displays a visual summary of question. 
+//Displays title in a card. 
 const Card = ({id, title, handleClick}) => {
 
     return(
         <div 
-        className='grid-card'
+        className='card'
         onClick={handleClick}
         >
-            {id}
             {title}
         </div>
     )
 
 }
+
+export default Card

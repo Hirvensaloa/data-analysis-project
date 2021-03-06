@@ -6,14 +6,16 @@ import {updateQuestions} from '../reducers/questionReducer'
 //Component to create a template for multiple choice questions
 const MultipleChoice = ({id, content}) => {
 
+    //Initialise everything to be blank. 
     let question = ''
     let option1 = ''
     let option2 = ''
     let option3 = ''
     let option4 = ''
 
+    //If content has been given as a parameter, get data. 
     if(typeof(content) !== 'undefined' && content.type === 'multiple') {
-        question = content.question
+        question = content.title
         option1 = content.options[0]
         option2 = content.options[1]
         option3 = content.options[2]
@@ -111,18 +113,21 @@ const MultipleChoice = ({id, content}) => {
                     value={option2}
                     placeholder='Option 2'
                     onChange={handleOptionChange}
+                    error={optError2}
                 />
                 <Form.Input
                     id='2'
                     value={option3}
                     placeholder='Option 3'
                     onChange={handleOptionChange}
+                    error={optError3}
                 />
                 <Form.Input
                     id='3'
                     value={option4}
                     placeholder='Option 4'
                     onChange={handleOptionChange}
+                    error={optError4}
                 />
             </Form>
         </div>

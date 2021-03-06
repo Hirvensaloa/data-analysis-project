@@ -1,0 +1,41 @@
+.hub {
+    display: flex;
+    flex-direction: row; 
+}
+
+.hub-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4vh;
+    margin-left: 1vw;
+    width: 15vw; 
+    height: 90vh;
+    border-style: none solid none none;
+    border-width: 1px;
+}
+
+.-sidebar--title {
+    margin-bottom: 4vh;
+}
+
+.hub-main {
+    width: 85vw;
+    height: 85vh; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hub-charts {
+    display: flex; 
+    flex-direction: column; 
+    width: 50%;
+    height: 50%;
+}
+
+.hub-charts--dropdown {
+    left: 2vw;
+}
+

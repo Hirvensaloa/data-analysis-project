@@ -10,11 +10,13 @@ import Form from '../QuestionTemplate/form'
 import { updateQuestions } from '../reducers/questionReducer'
 import { useDispatch } from 'react-redux'
 
-//Carousel that displays questions from redux store. 
+//Carousel that displays questions from redux store. Created by creator.js component. 
 const Carousel = ({questions}) => {
 
+    const initialId = questions.length === 0 ? 0 : questions[questions.length - 1].id
+
     //Creates id's for questions
-    const [id, incrementId] = useState(0)
+    const [id, incrementId] = useState(initialId)
 
     //Keeps track of the active index when component is re-rendered. 
     const [index, setIndex] = useState(0)
@@ -24,6 +26,7 @@ const Carousel = ({questions}) => {
     //If parameter is undefined initialise items to be a empty list. 
     const items = () => typeof(questions) === 'undefined' ? [] : questions
 
+    //Adds new item to carousel. 
     const add = () => {
 
         const newId = id + 1
@@ -51,7 +54,7 @@ const Carousel = ({questions}) => {
                 }
             }
             >
-                {items().map(item => <Form id={item.id} content={item}/>)}
+                {items().map(item => <Form key={item.id} id={item.id} content={item}/>)}
                 <div key={-1}><AddButton handleClick={add}/></div>
             </Slider>
         </div>

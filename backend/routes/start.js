@@ -1,6 +1,7 @@
 const mainRouter = require('express').Router()
 const questionRouter = require('./questions')
 const answerRouter = require('./answers') 
+const dataRouter = require('./data')
 
 const logger = require('./../utils/logger')
 
@@ -14,5 +15,6 @@ mainRouter.route('/')
 
 mainRouter.use('/questions', questionRouter)
 mainRouter.use('/answers', answerRouter)
+mainRouter.use('/data', dataRouter)
 
 module.exports = mainRouter 
